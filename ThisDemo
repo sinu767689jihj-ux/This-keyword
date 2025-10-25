@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class ThisDemo {
+    int a=0,b=0;
+    ThisDemo()
+    {
+        System.out.println("Default Constructor:");
+    }
+    ThisDemo(int a)
+    {
+        this();
+        System.out.println("a");
+    }
+    ThisDemo(int a,int b)
+    {
+        this(a);
+        this.a=a;
+        this.b=b;
+        System.out.println(a+b);
+    }
+    void display()
+    {
+        System.out.println("Sum of the Element:"+(a+b));
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the c value:");
+        int c=sc.nextInt();
+        System.out.println("Enter the d value:");
+        int d=sc.nextInt();
+        ThisDemo t=new ThisDemo(d,c);
+        t.display();
+    }
+}
